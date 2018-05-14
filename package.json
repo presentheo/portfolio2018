@@ -4,7 +4,8 @@
   "description": "portfolio project 2018",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/presentheo/portfolio2018#readme",
   "dependencies": {
+    "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^3.1.4"
   }
