@@ -1,0 +1,23 @@
+{
+  "name": "portfolio2018",
+  "version": "1.0.0",
+  "description": "portfolio project 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/presentheo/portfolio2018.git"
+  },
+  "author": "presentheo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/presentheo/portfolio2018/issues"
+  },
+  "homepage": "https://github.com/presentheo/portfolio2018#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "webpack": "^3.5.6"
+  }
+}
