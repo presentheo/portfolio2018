@@ -1,4 +1,5 @@
 const path = require('path');
+const express = require('express');
 
 const config = {
     entry: __dirname + '/src/entry.js',
