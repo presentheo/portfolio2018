@@ -1,3 +1,3 @@
-const foo = (e) => document.write(e);
+// const foo = (e) => document.write(e);
 
-foo("Hello World!");
+// foo("Hello World!");
