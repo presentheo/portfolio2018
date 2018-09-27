@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Present.heo</title>
 
     <link rel="stylesheet" href="/src/css/01 normalize.css">
     <link rel="stylesheet" href="/src/css/02 main.css">
@@ -12,23 +12,38 @@
 <body>
 
     <div class="area area-menu">
+        <div class="logo"></div>
         <div class="menu">
             <ul class="menu-items">
                 <li class="menu-item"><a href="#">profile</a></li>
-                <li class="menu-item"><a href="#">profile</a></li>
-                <li class="menu-item"><a href="#">profile</a></li>
+                <li class="menu-item"><a href="#">career</a></li>
                 <li class="menu-item"><a href="#">contact</a></li>
             </ul>
         </div>
     </div>
+
     <div class="area area-contents">
         <div class="contents">
             <ul class="contents-items">
-                <li class="contents-item">1</li>
-                <li class="contents-item">2</li>
-                <li class="contents-item">3</li>
-                <li class="contents-item">4</li>
-                <li class="contents-item">5</li>
+                <li class="contents-item">
+                    <div class="caption">
+                        <div class="caption-bg">
+                            <h3>플러시</h3>
+                            <p>-</p>
+                            <p>주식회사 플러시 웹 디자인 및 퍼블리싱</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="contents-item"></li>
+            </ul>
+            <ul class="contents-items">
+                <li class="contents-item"></li>
+                <li class="contents-item"></li>
+                <li class="contents-item"></li>
+            </ul>
+            <ul class="contents-items">
+                <li class="contents-item"></li>
+                <li class="contents-item"></li>
             </ul>
         </div>        
     </div>
@@ -36,14 +51,28 @@
     <script src="../js/main.js"></script>
 
     <script>
-        var items = document.querySelectorAll('.contents-item');
 
-        for (let i = 0; i < items.length; i++) {
-            const item = items[i];
-            item.addEventListener('click', function(){
-                alert(item.textContent + ':' + i);
-            })
+        const randomRgb = () => {
+            let r = Math.floor((Math.random() * 255) + 1);
+            let g = Math.floor((Math.random() * 255) + 1);
+            let b = Math.floor((Math.random() * 255) + 1);
+
+            return 'rgb(' + [r,g,b].join(',') + ')';
         }
+
+        const contents = document.querySelectorAll('.contents-item');
+
+        const setBgColor = (array) => {
+            array.forEach(element => {
+                element.style.backgroundColor = randomRgb();                
+            });
+        }
+
+        setBgColor(contents)
+        
+        setInterval(() => {
+            setBgColor(contents);
+        }, 5000);
 
     </script>
     
